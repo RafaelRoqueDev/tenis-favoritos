@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* imagem estiver dentro da pasta public, você deve usar o caminho relativo
+  a partir do nível da raiz do projeto, sem o prefixo ../public */
+  background-image: url('/img/nadine-e-giRptv1GDN4-unsplash.jpg');
+}
+
+.box {
+  border: 10px solid #ffffff;
+  margin-bottom: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #fff;
+  font-size: 100px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.subTitle {
+  color: #fff;
+  font-size: 24px;
+  padding: 8px;
+}
+
+.paragraph {
+  color: #fff;
+  padding: 10px;
+}
+
+.button {
+  padding: 28px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-left: auto; /* Faz o botão se mover para a direita */
+  border: none; /* Tirar a borda do botão */
+  cursor: pointer; /* Muda o cursor para um ponteiro ao passar por cima */
+}
+
+.button:hover {
+  background-color: #fdfdfd;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.button:active {
+  background-color: #969696;
+  color: #fff;
+}
+
+/* Carrossel */
+/*centralizar o carrossel no meio da tela */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  overflow: hidden;
+}
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-slide img {
+  width: 100%;
+  max-width: 300px; /* Ajuste conforme necessário */
+  display: none; /* Oculta todas as imagens por padrão */
+  text-align: center;
+}
+.carousel-slide img.active {
+  display: block; /* Apenas a imagem ativa será exibida */
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+.carousel-button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #000;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 10px;
+  text-align: center;
+}
