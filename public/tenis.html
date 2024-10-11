@@ -7,71 +7,30 @@
     <title>Galeria de Tênis</title>
   </head>
   <body>
+    {/* A ideia é fazer uma galeria de tênis em formato de blocos */}
+    {/* Cada bloco deve conter uma imagem de um tênis e um texto com o nome do tênis */}
+    {/* A galeria deve ser responsiva, ou seja, deve se adaptar a diferentes tamanhos de tela */}
+    {/* A galeria deve ser estilizada com CSS */}
     <div class="root">
       <h1 class="title">Galeria de Tênis</h1>
-      <div class="carousel">
-        <div class="carousel-container">
-          <div class="carousel-slide" id="carouselSlide">
-            <img id="img-tenis1" src="./img/Captura de tela de 2024-09-28 17-53-11.png" alt="Tênis 1" class="active" />
-            <img id="img-tenis2" src="./img/Captura de tela de 2024-09-28 17-54-14.png" alt="Tênis 2" />
-            <img id="img-tenis3" src="./img/Captura de tela de 2024-09-28 17-53-49.png" alt="Tênis 3" />
-          </div>
-          <div class="carousel-buttons">
-            <button class="carousel-button" onclick="prevSlide()">❮</button>
-            <button class="carousel-button" onclick="nextSlide()">❯</button>
-          </div>
-        </div>
-      </div>
-      <div class="cards">
-        <!-- Aqui você pode adicionar os cards com as fotos -->
-        <div class="card" onclick="window.location.href='pagina_exclusiva.html'">
-          <img class="img-tenis" src="./img/Captura de tela de 2024-09-28 17-53-11.png" alt="Tênis 1" />
+      <div class="tenis-container">
+        <div class="tenis">
+          <img src="./img/tenis1.jpg" alt="Tênis 1" />
           <p>Tênis 1</p>
-        </div>
-        <div class="card" onclick="window.location.href='pagina_exclusiva.html'">
-          <img class="img-tenis" src="./img/Captura de tela de 2024-09-28 17-54-14.png" alt="Tênis 2" />
-          <p>Tênis 2</p>
-        </div>
-        <div class="card" onclick="window.location.href='pagina_exclusiva.html'">
-          <img class="img-tenis" src="./img/Captura de tela de 2024-09-28 17-53-49.png" alt="Tênis 3" />
-          <p>Tênis 3</p>
-        </div>
-      </div>
+        <div>
+        <div class="tenis">
+          <img src="./img/tenis2.jpg" alt="Tênis 2" />
+          <p>Tênis 1</p>
+        <div>
+        <div class="tenis">
+          <img src="./img/tenis3.jpg" alt="Tênis 3" />
+          <p>Tênis 1</p>
+        <div>
+        <div class="tenis">
+          <img src="./img/tenis4.jpg" alt="Tênis 4" />
+          <p>Tênis 1</p>
+        <div>
     </div>
     <script src="script.js"></script>
-    <script>
-      let currentIndex = 0;
-
-      function showSlide(index) {
-        const slides = document.querySelectorAll('#carouselSlide img');
-        const totalSlides = slides.length;
-
-        // Oculta todas as imagens
-        slides.forEach(slide => slide.classList.remove('active'));
-
-        // Atualiza o índice atual
-        if (index >= totalSlides) {
-          currentIndex = 0;
-        } else if (index < 0) {
-          currentIndex = totalSlides - 1;
-        } else {
-          currentIndex = index;
-        }
-
-        // Exibe a imagem ativa
-        slides[currentIndex].classList.add('active');
-      }
-
-      function nextSlide() {
-        showSlide(currentIndex + 1);
-      }
-
-      function prevSlide() {
-        showSlide(currentIndex - 1);
-      }
-
-      // Exibe a primeira imagem ao carregar
-      showSlide(currentIndex);
-    </script>
   </body>
 </html>

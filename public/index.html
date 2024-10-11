@@ -3,22 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Subir um server Local</title>
   </head>
   <body>
     <div class="root">
       <div class="box">
-        <h1 class="title">Tênis Favoritos</h1>
-        <h2 class="subTitle">
-          Seleção de tênis favoritos, para toda a família.
-        </h2>
-        <p class="paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto ea,
-          minima dolorem sunt ex hic temporibus nihil eveniet facere aliquid ut,
-          unde earum illo! Fugit velit quis nemo unde nulla.
-        </p>
-        <button id="button" class="button" onclick="window.location.href='tenis.html'">Galeria</button>
+        <div class="text">
+          <h1 class="title">Tênis Favoritos</h1>
+          <h2 class="subTitle">Descubra quem são os queridinhos do momento.</h2>
+        </div>
+        <div class="tenis-container">
+          <button id="button" onclick="window.location.href='tenis.html'">
+            <img
+              class="tenis-botao"
+              src="./img/Captura de tela de 2024-10-11 19-19-12.png"
+              alt="Imagem de um tênis"
+            />
+            <p class="sobre-img">Galeria</p>
+          </button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
