@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+}
+
+:root {
+  --gray-400: #373738;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  margin: 2%;
+}
+
+.header {
+  font-size: 46px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 16px;
+}
+
+/* Definição de layout com grid responsivo */
+ul {
+  display: grid;
+  grid-template-columns: 1fr; /* Por padrão, 1 card por linha */
+  gap: 16px; /* Espaçamento entre os cards */
+  list-style: none;
+  padding: 0;
+}
+
+/* Media Queries para ajustar o número de colunas com o aumento da tela */
+@media (min-width: 600px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  }
+}
+
+@media (min-width: 900px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+  }
+}
+
+@media (min-width: 1200px) {
+  ul {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards por linha */
+  }
+}
+
+li {
+  background-color: white;
+  padding: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+}
+
+h2 {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 40px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
